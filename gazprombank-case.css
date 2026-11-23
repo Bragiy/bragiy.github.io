@@ -1,0 +1,177 @@
+/* Copyright 2022 The Unbounded Project Authors (https://github.com/googlefonts/unbounded)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+ */
+@font-face{font-family:Unbounded;src:url(assets/fbca7cbd1841a6b6c570.woff) format(woff);font-style:normal;font-weight:200 900;font-display:swap}
+:root{--case-top:#030b14;--case-bottom:#0d2e52;--case-accent:#19b5fe;--case-muted:#d2dfed}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:#f4f7fa;background:#18181a;isolation:isolate;font:16px/1.6 Unbounded,system-ui,sans-serif}
+/* Use viewport coordinates so the center stays under the pointer during scrolling. */
+body.has-pointer-gradient::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse farthest-corner at var(--pointer-x) var(--pointer-y),var(--case-top),var(--case-bottom))}
+main{max-width:1160px;margin:auto;padding:24px clamp(16px,4vw,45px) 60px}
+article{border:1px solid #ffffff25;border-radius:24px;background:#ffffff0b;padding:clamp(16px,3vw,34px)}
+a{color:inherit;text-underline-offset:4px}a:focus-visible{outline:2px solid var(--case-accent);outline-offset:4px}
+.intro{padding:64px 0 28px}.intro p{color:var(--case-muted);max-width:60ch}
+h1{font-size:clamp(44px,10vw,118px);line-height:1;margin:0;letter-spacing:.015em}
+h2{font-size:clamp(20px,3vw,32px);letter-spacing:.01em;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+img{width:100%;height:auto;display:block;border-radius:16px}.hero{border-radius:26px}
+article p{margin:0 0 20px;color:var(--case-muted)}.wide{grid-column:1/-1}
+.merch{margin-top:16px}.merch .grid{margin-top:0}
+figure{margin:0;min-width:0}figcaption{margin-top:10px;font-size:14px;color:var(--case-muted)}
+footer{margin-top:24px;font-size:14px}
+.zoom-trigger{display:block;width:100%;padding:0;border:0;border-radius:16px;background:none;cursor:zoom-in}
+.zoom-trigger:has(.hero){border-radius:26px}
+.zoom-trigger:focus-visible,.zoom-close:focus-visible{outline:2px solid var(--case-accent);outline-offset:4px}
+body:has(.image-viewer[open]){overflow:hidden}
+.image-viewer{max-width:100%;max-height:100%;padding:0;border:0;background:transparent;color:inherit;overflow:visible}
+.image-viewer::backdrop{background:#02050de8;animation:viewer-fade-in 500ms ease both}
+.viewer-content{display:grid;justify-items:end;gap:10px}
+.zoom-close{font:inherit;font-size:13px;color:inherit;background:#12263b;border:1px solid #ffffff40;border-radius:999px;padding:8px 14px;cursor:pointer}
+.viewer-frame{display:grid;border-radius:16px;overflow:hidden}
+.viewer-frame img{width:auto;max-width:min(1200px,calc(100vw - 32px));max-height:calc(100dvh - 90px);object-fit:contain}
+.image-viewer[open] .viewer-frame{animation:wave-open 680ms cubic-bezier(.4,0,.22,1) both}
+@keyframes viewer-fade-in{from{opacity:0}to{opacity:1}}
+@keyframes wave-open{
+  0%{opacity:0;transform:perspective(1000px) rotateX(-7deg) scale(.92);clip-path:ellipse(65% 38% at 50% 59%)}
+  100%{opacity:1;transform:perspective(1000px) rotateX(0) scale(1);clip-path:ellipse(85% 85% at 50% 50%)}
+}
+@media(prefers-reduced-motion:reduce){.image-viewer[open] .viewer-frame,.image-viewer::backdrop{animation:none}}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.intro{padding-top:44px}}
+:root{--nav-glass:#081b33e0;--nav-panel:#102640}
+.site-nav{position:sticky;top:12px;z-index:5;width:min(1080px,calc(100% - 32px));box-sizing:border-box;margin:12px auto 0;padding:6px;display:flex;align-items:center;justify-content:center;gap:clamp(3px,2vw,22px);border:1px solid #ffffff30;border-radius:24px;background:var(--nav-glass);backdrop-filter:blur(18px);font-size:clamp(11px,2.7vw,14px)}
+.site-nav>a,.site-nav summary{padding:9px clamp(8px,2vw,16px);border-radius:15px;text-decoration:none;cursor:pointer;white-space:nowrap}
+.site-nav summary{list-style:none}.site-nav summary::-webkit-details-marker{display:none}
+.site-nav>a:hover,.site-nav a[aria-current],.site-nav details[open] summary,.nav-panel a:hover{background:#ffffff18}
+.site-nav details{position:relative}
+.nav-panel{position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:190px;margin:0;padding:8px;list-style:none;border:1px solid #ffffff30;border-radius:16px;background:var(--nav-panel);box-shadow:0 8px 24px #0005}
+.site-nav details:last-of-type .nav-panel{left:auto;right:0;transform:none;min-width:145px}
+.nav-panel a{display:block;padding:8px 10px;border-radius:9px;text-decoration:none}
+.site-nav :focus-visible{outline:2px solid #ddd;outline-offset:2px}
+
+:root{color-scheme:dark;--cursor-glow:#be8cff2c}
+:root[data-theme="light"]{color-scheme:light;--cursor-glow:#834bd910;--nav-glass:#fffc;--nav-panel:#fffcff}
+body.has-pointer-gradient::before{background:radial-gradient(circle 75px at var(--pointer-x) var(--pointer-y),var(--cursor-glow),transparent 100%)}
+.theme-toggle{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;padding:0;border:1px solid #ffffff35;border-radius:50%;background:transparent;color:inherit;cursor:pointer;font:20px/1 system-ui,sans-serif}
+.theme-toggle:hover{background:#ffffff18}
+[data-theme="light"] body{background:#f6effa;color:#261e30}
+.case-page{--cursor-glow:#19b5fe33}
+.case-page[data-theme="light"]{--cursor-glow:#0080ce10;--nav-panel:#f8fcff;--case-muted:#394e64}
+.case-page[data-theme="light"] body{background:#eef5fc;color:#142b43}
+[data-theme="light"] .site-nav,[data-theme="light"] .nav-panel{border-color:#21132c22;box-shadow:0 8px 24px #21132c15}
+[data-theme="light"] .site-nav>a:hover,[data-theme="light"] .site-nav a[aria-current],[data-theme="light"] .site-nav details[open] summary,[data-theme="light"] .nav-panel a:hover,[data-theme="light"] .theme-toggle:hover{background:#31204412}
+[data-theme="light"] .theme-toggle{border-color:#21132c30}
+[data-theme="light"] .site-nav :focus-visible,[data-theme="light"] a:focus-visible{outline-color:#65448d}
+[data-theme="light"] .intro p,[data-theme="light"] .about-card p,[data-theme="light"] footer{color:#51435c}
+.case-page[data-theme="light"] .intro p{color:var(--case-muted)}
+[data-theme="light"] .about-card,[data-theme="light"] article{background:#ffffffc9;border-color:#21132c16}
+[data-theme="light"] .card{border-color:#21132c25}
+[data-theme="light"] .proxima{background:#d7e7f7;color:#102640}
+[data-theme="light"] .don{background:#dfece3;color:#21312c}
+[data-theme="light"] .yandex{background:#faecc2;color:#362d16}
+[data-theme="light"] .bank{background:#dbe6fb;color:#17243e}
+[data-theme="light"] .sibur{background:#d8eeec;color:#153435}
+[data-theme="light"] .face{color:white}
+.image-viewer{color:#f4f7fa}
+@media(max-width:430px){
+  .site-nav{gap:2px;padding:5px;width:calc(100% - 16px)}
+  .site-nav>a,.site-nav summary{padding-inline:6px}
+  .theme-toggle{width:30px;height:30px;flex-basis:30px}
+}
+.theme-icon{display:block}.theme-icon-moon,[data-theme="light"] .theme-icon-sun{display:none}[data-theme="light"] .theme-icon-moon{display:block}
+
+.gazprombank-page{--cursor-glow:#879bff30;--nav-glass:#171f35ed;--nav-panel:#202d4b}
+.gazprombank-page[data-theme="light"]{--cursor-glow:#4664c516;--nav-panel:#f5f8ff;--case-muted:#394c71}
+.gazprombank-page[data-theme="light"] body{background:#edf2fc;color:#1d2c48}
+.gazprombank-page .intro h1{font-size:clamp(32px,8vw,104px)}
+.gazprombank-page article a{display:inline-block;margin-top:8px}
+.gazprombank-page .intro h1{font-size:clamp(25px,7vw,92px)}

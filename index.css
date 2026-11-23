@@ -1,0 +1,214 @@
+/* Copyright 2022 The Unbounded Project Authors (https://github.com/googlefonts/unbounded)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+ */
+@font-face{font-family:Unbounded;src:url(assets/fbca7cbd1841a6b6c570.woff) format(woff);font-style:normal;font-weight:200 900;font-display:swap}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;isolation:isolate;font:16px/1.5 "Unbounded",system-ui,sans-serif}
+/* Use viewport coordinates so the center stays under the pointer during scrolling. */
+body.has-pointer-gradient::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:none}
+main,footer{width:min(1200px,calc(100% - 40px));margin-inline:auto}
+a{color:inherit;text-underline-offset:4px}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+h1{font-size:clamp(32px,6.8vw,96px);line-height:1.08;letter-spacing:-.065em;margin:0}
+.intro{padding:clamp(42px,8vw,110px) 0 38px}
+.intro p{font-size:clamp(16px,2.1vw,23px);margin:16px 0 0}
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;scroll-margin-top:80px}
+.card{grid-column:span 2;position:relative;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;min-height:315px;border-radius:28px;padding:24px;text-decoration:none;isolation:isolate;transition:box-shadow .25s}
+.card:nth-child(-n+2){min-height:350px}
+.card{border:1px solid #ffffff24}
+.card:hover,.card:focus-visible{box-shadow:0 10px 26px #07030b60}
+.proxima{grid-column:span 4}
+.tag{font-size:14px;font-weight:600}
+h2{font-size:clamp(21px,2.4vw,32px);letter-spacing:-.045em;line-height:1.14;margin:0;overflow-wrap:anywhere}
+.caption{margin:5px 0 0}
+.art{display:grid;place-items:center;flex:1;min-height:150px}
+.word{font-weight:850;font-size:clamp(24px,3.4vw,49px);letter-spacing:-.075em;line-height:1;transform:rotate(-8deg);opacity:.84}
+.proxima .word{transform:none;font-size:clamp(45px,9vw,120px)}
+.sibur .word{font-size:clamp(28px,4vw,56px)}
+.scene{perspective:540px;width:155px;height:112px;display:grid;place-items:center}
+.box{position:relative;width:146px;height:84px;transform-style:preserve-3d;transform:rotateX(-24deg) rotateY(var(--turn,-26deg))}
+.face{position:absolute;inset:0;border:1px solid #9daae3;display:grid;place-items:center;background:#5269ad;backface-visibility:hidden}
+.front{transform:translateZ(35px);font-size:13px;font-weight:700}
+.back{transform:rotateY(180deg) translateZ(35px)}
+.left,.right{width:70px;left:38px;background:#303f76}
+.left{transform:rotateY(-90deg) translateZ(73px)}
+.right{transform:rotateY(90deg) translateZ(73px)}
+.top,.bottom{height:70px;top:7px;background:#7288c8}
+.top{transform:rotateX(90deg) translateZ(42px);background:repeating-linear-gradient(125deg,#8397d2 0 12px,#667dbb 12px 24px)}
+.bottom{transform:rotateX(-90deg) translateZ(42px)}
+footer{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;padding:30px 0 45px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.card,.proxima{grid-column:auto;min-height:280px}.card:nth-child(-n+2){min-height:300px}}
+@media(prefers-reduced-motion:reduce){.card{transition:none}.box{transform:rotateX(-24deg) rotateY(-26deg)}}
+.site-nav{position:sticky;top:12px;z-index:5;width:min(1080px,calc(100% - 32px));box-sizing:border-box;margin:12px auto 0;padding:6px;display:flex;align-items:center;justify-content:center;gap:clamp(3px,2vw,22px);border:1px solid #ffffff30;border-radius:24px;background:var(--nav-glass);backdrop-filter:blur(18px);font-size:clamp(11px,2.7vw,14px)}
+.site-nav>a,.site-nav summary{padding:9px clamp(8px,2vw,16px);border-radius:15px;text-decoration:none;cursor:pointer;white-space:nowrap}
+.site-nav summary{list-style:none}.site-nav summary::-webkit-details-marker{display:none}
+.site-nav>a:hover,.site-nav a[aria-current],.site-nav details[open] summary,.nav-panel a:hover{background:#ffffff18}
+.site-nav details{position:relative}
+.nav-panel{position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:190px;margin:0;padding:8px;list-style:none;border:1px solid #ffffff30;border-radius:16px;background:var(--nav-panel);box-shadow:0 8px 24px #0005}
+.site-nav details:last-of-type .nav-panel{left:auto;right:0;transform:none;min-width:145px}
+.nav-panel a{display:block;padding:8px 10px;border-radius:9px;text-decoration:none}
+.site-nav :focus-visible{outline:2px solid #ddd;outline-offset:2px}
+.about{scroll-margin-top:85px;margin-top:clamp(42px,8vw,95px)}
+.about-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,300px);align-items:center;gap:clamp(22px,5vw,70px);padding:clamp(20px,4vw,46px);border:1px solid #ffffff24;border-radius:28px}
+.about-card p{margin:14px 0 0;max-width:61ch}
+.about-card img{display:block;width:100%;height:auto;border-radius:18px}
+@media(max-width:650px){.about-card{grid-template-columns:1fr}.about-card img{max-width:300px}}
+
+:root{color-scheme:dark}
+:root[data-theme="light"]{color-scheme:light}
+body.has-pointer-gradient::before{background:radial-gradient(circle 75px at var(--pointer-x) var(--pointer-y),var(--cursor-glow),transparent 100%)}
+.theme-toggle{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;padding:0;border:1px solid #ffffff35;border-radius:50%;background:transparent;color:inherit;cursor:pointer;font:20px/1 system-ui,sans-serif}
+.theme-toggle:hover{background:#ffffff18}
+.case-page{--cursor-glow:#19b5fe33}
+.case-page[data-theme="light"]{--cursor-glow:#0080ce10;--nav-panel:#f8fcff;--case-muted:#394e64}
+.case-page[data-theme="light"] body{background:#eef5fc;color:#142b43}
+.case-page[data-theme="light"] .intro p{color:var(--case-muted)}
+[data-theme="light"] .face{color:white}
+.image-viewer{color:#f4f7fa}
+@media(max-width:430px){
+  .site-nav{gap:2px;padding:5px;width:calc(100% - 16px)}
+  .site-nav>a,.site-nav summary{padding-inline:6px}
+  .theme-toggle{width:30px;height:30px;flex-basis:30px}
+}
+.theme-icon{display:block}.theme-icon-moon,[data-theme="light"] .theme-icon-sun{display:none}[data-theme="light"] .theme-icon-moon{display:block}
+.don-cover{margin:14px 0;min-height:0}.don-cover img{display:block;width:100%;height:auto;border-radius:15px}
+.yandex-cover{position:relative;display:block;flex:none;min-height:0;aspect-ratio:2;margin:14px 0;overflow:hidden;border-radius:15px;background:#ffef00}.yandex-cover img{position:absolute;display:block;width:100%;height:auto;bottom:0;left:0}
+
+.bank .scene{perspective:560px;width:190px;max-width:100%;height:168px}
+.bank .box{--half-depth:35px;width:146px;height:124px;transform:rotateX(-18deg) rotateY(var(--turn,-24deg))}
+.bank .face{border:0;background:#1a40ad}
+.bank .front{transform:translateZ(var(--half-depth));background:#234cbf url(assets/c4e261563bf0180ada00.webp) center/100% 100% no-repeat}
+.bank .back{transform:rotateY(180deg) translateZ(var(--half-depth));background:#2146b6}
+.bank .left,.bank .right{width:calc(2 * var(--half-depth));left:calc(50% - var(--half-depth));background:#173686}
+.bank .left{transform:rotateY(-90deg) translateZ(73px)}
+.bank .right{transform:rotateY(90deg) translateZ(73px);background:#1b3d96}
+.bank .top,.bank .bottom{height:calc(2 * var(--half-depth));top:calc(50% - var(--half-depth));background:#3058c6}
+.bank .top{transform:rotateX(90deg) translateZ(62px)}
+.bank .bottom{transform:rotateX(-90deg) translateZ(62px)}
+@media(prefers-reduced-motion:reduce){.bank .box{transform:rotateX(-18deg) rotateY(-24deg)}}
+.sibur-cover{display:block;flex:none;min-height:0;margin:14px 0}
+.sibur-cover img{display:block;width:100%;height:auto;border-radius:15px}
+.proxima-cover{display:block;flex:none;min-height:0;margin:14px 0;border-radius:15px;overflow:hidden;background:#0a1c32}
+.proxima-cover img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain}
+@media (any-hover: hover) and (prefers-reduced-motion: no-preference) {
+  .card .art { transition: transform .3s ease; }
+  .card:hover .art { transform: perspective(850px) rotateX(5deg) translateY(-4px); }
+}
+
+:root{
+  --page:#191919;--ink:#f5f5f5;--muted:#c5c5c5;
+  --glass:linear-gradient(155deg,#ffffff18,#ffffff07 58%,#ffffff0f);
+  --rim:#ffffff23;--glint:#ffffff26;--shade:#00000038;
+  --nav-glass:linear-gradient(155deg,#ffffff1f,#ffffff06),#202020a8;
+  --nav-panel:#2a2a2a;--control-hover:#ffffff18;--cursor-glow:#ffffff15
+}
+:root[data-theme="light"]{
+  --page:#ededed;--ink:#202020;--muted:#505050;
+  --glass:linear-gradient(155deg,#ffffffe0,#ffffff68 60%,#ffffffa8);
+  --rim:#00000017;--glint:#ffffffd9;--shade:#00000012;
+  --nav-glass:linear-gradient(155deg,#ffffffe0,#ffffff55),#eeeeee8c;
+  --nav-panel:#fafafa;--control-hover:#0000000d;--cursor-glow:#ffffffa3
+}
+body,[data-theme="light"] body{background:var(--page);color:var(--ink)}
+.card,.about-card,[data-theme="light"] .about-card{
+  background:var(--glass);color:var(--ink);border-color:var(--rim);
+  box-shadow:inset 0 1px 0 var(--glint),0 8px 24px var(--shade)
+}
+.card:hover,.card:focus-visible{box-shadow:inset 0 1px 0 var(--glint),0 12px 28px var(--shade)}
+.site-nav,.nav-panel{border-color:var(--rim);box-shadow:inset 0 1px 0 var(--glint),0 8px 24px var(--shade)}
+.site-nav{backdrop-filter:blur(22px)}
+.intro p,.about-card p,.tag,.caption,footer{color:var(--muted)}
+.site-nav>a:hover,.site-nav a[aria-current],.site-nav details[open] summary,.nav-panel a:hover,.theme-toggle:hover{background:var(--control-hover)}
+.theme-toggle{border-color:var(--rim)}
+a:focus-visible,.site-nav :focus-visible{outline-color:var(--ink)}
